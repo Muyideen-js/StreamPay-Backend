@@ -1,7 +1,7 @@
 {
   "name": "streampay-backend",
   "version": "0.1.0",
-  "description": "StreamPay API — stream management, metering, and settlement",
+  "description": "StreamPay API \u2014 stream management, metering, and settlement",
   "keywords": [
     "streampay",
     "stellar",
@@ -24,9 +24,9 @@
   "homepage": "https://github.com/Streampay-Org/StreamPay-Backend#readme",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "node api.js && tsc",
+    "start": "node api.js && node dist/index.js",
+    "dev": "node api.js && ts-node-dev --respawn src/index.ts",
     "test": "jest",
     "lint": "eslint src --ext .ts",
     "db:push": "drizzle-kit push",
@@ -37,7 +37,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@asteasolutions/zod-to-openapi": "^8.5.0",
+    "@asteasolutions/zod-to-openapi": "^9.1.0",
     "@opentelemetry/api": "^1.9.1",
     "@opentelemetry/exporter-trace-otlp-http": "^0.221.0",
     "@opentelemetry/instrumentation-express": "^0.69.0",
